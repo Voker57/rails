@@ -68,7 +68,7 @@ module ActionDispatch
 
       class Mapping #:nodoc:
         ANCHOR_CHARACTERS_REGEX = %r{\A(\\A|\^)|(\\Z|\\z|\$)\Z}
-        OPTIONAL_FORMAT_REGEX = %r{(?:\(\.:format\)+|\.:format|/)\Z}
+        OPTIONAL_FORMAT_REGEX = %r{(?:\(\.:format\)+|\.:format\b|/\Z)}
 
         attr_reader :requirements, :defaults, :to, :default_controller,
                     :default_action, :required_defaults, :ast, :scope_options
